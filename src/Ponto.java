@@ -8,6 +8,8 @@ public class Ponto {
         if (numero1 > numero2) {
             System.out.println("Maior que");
         }
-
+        else {
+            System.out.printf("Menor que");
+        }
     }
 }
