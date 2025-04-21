@@ -1,3 +1,5 @@
+package atividadesLista;
+
 import java.util.Scanner;
 
 public class Ponto {
