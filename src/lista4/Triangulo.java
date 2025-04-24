@@ -28,4 +28,10 @@ public class Triangulo {
     public void setLado3(int lado3) {
         this.lado3 = lado3;
     }
+
+    public Variacao tipo() {
+        if (lado1 == lado2 && lado1 == lado3) {
+            return Variacao.Equilatero;
+        }
+    }
 }
