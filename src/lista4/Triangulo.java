@@ -33,5 +33,11 @@ public class Triangulo {
         if (lado1 == lado2 && lado1 == lado3) {
             return Variacao.Equilatero;
         }
+        else if (lado1 != lado2 && lado1 != lado3) {
+            return Variacao.Escaleno;
+        }
+        else {
+            return Variacao.ISoceles;
+        }
     }
 }
