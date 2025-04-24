@@ -40,4 +40,12 @@ public class Triangulo {
             return Variacao.ISoceles;
         }
     }
+
+    public static void main(String[] args) {
+        Triangulo t = new Triangulo();
+        t.setLado1(10);
+        t.setLado2(2);
+        t.setLado3(1);
+        System.out.println(t.tipo());
+    }
 }
