@@ -1,5 +1,7 @@
 package lista4;
 
+import java.util.Scanner;
+
 public class Triangulo {
     private int lado1;
     private int lado2;
@@ -43,9 +45,21 @@ public class Triangulo {
 
     public static void main(String[] args) {
         Triangulo t = new Triangulo();
-        t.setLado1(3);
-        t.setLado2(3);
-        t.setLado3(1);
-        System.out.println(t.tipo());
+        Scanner print = new Scanner(System.in);
+        while (true) {
+            System.out.println("Digite o primeiro lado: ");
+            t.setLado1(print.nextInt());
+            System.out.println("Digite o segundo lado: ");
+            t.setLado2(print.nextInt());
+            System.out.println("Digite o terceiro lado: ");
+            t.setLado3(print.nextInt());
+            print.nextLine();
+            System.out.println(t.tipo());
+            System.out.println("Deseja sair? digite x caso sim: ");
+            String escolha = print.nextLine();
+            if (escolha.equals("x")) {
+                break;
+            }
+        }
     }
 }
