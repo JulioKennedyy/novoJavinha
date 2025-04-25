@@ -1,6 +1,6 @@
 package lista4;
 
-public enum Variacao {
+public enum TiposDeTriangulo {
     Equilatero,
     ISoceles,
     Escaleno;

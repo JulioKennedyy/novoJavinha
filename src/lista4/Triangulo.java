@@ -29,22 +29,22 @@ public class Triangulo {
         this.lado3 = lado3;
     }
 
-    public Variacao tipo() {
+    public TiposDeTriangulo tipo() {
         if (lado1 == lado2 && lado1 == lado3) {
-            return Variacao.Equilatero;
+            return TiposDeTriangulo.Equilatero;
         }
         else if (lado1 != lado2 && lado1 != lado3) {
-            return Variacao.Escaleno;
+            return TiposDeTriangulo.Escaleno;
         }
         else {
-            return Variacao.ISoceles;
+            return TiposDeTriangulo.ISoceles;
         }
     }
 
     public static void main(String[] args) {
         Triangulo t = new Triangulo();
-        t.setLado1(10);
-        t.setLado2(2);
+        t.setLado1(3);
+        t.setLado2(3);
         t.setLado3(1);
         System.out.println(t.tipo());
     }
