@@ -30,15 +30,21 @@ public class Triangulo {
     public void setLado3(int lado3) {
         this.lado3 = lado3;
     }
+    int equilatero = 0;
+    int escaleno = 0;
+    int isoceles = 0;
 
     public TiposDeTriangulo tipo() {
         if (lado1 == lado2 && lado1 == lado3) {
+            System.out.println("Total de equilatero: " + ++equilatero);
             return TiposDeTriangulo.Equilatero;
         }
         else if (lado1 != lado2 && lado1 != lado3) {
+            System.out.println("Total de Escaleno: " + ++escaleno);
             return TiposDeTriangulo.Escaleno;
         }
         else {
+            System.out.println("Total de isoceles: " + ++isoceles);
             return TiposDeTriangulo.ISoceles;
         }
     }
