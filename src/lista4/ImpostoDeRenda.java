@@ -27,4 +27,10 @@ public class ImpostoDeRenda {
         }
         return (float) (getSalario() - 869.36);
     }
+
+    public static void main(String[] args) {
+        ImpostoDeRenda sal = new ImpostoDeRenda();
+        sal.setSalario(6000);
+        System.out.println(sal.calcularImposto());
+    }
 }
