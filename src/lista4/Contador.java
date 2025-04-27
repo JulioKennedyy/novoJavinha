@@ -26,6 +26,7 @@ public class Contador {
         int x = 0;
         Scanner print = new Scanner(System.in);
         Trabalhador t1 = new Trabalhador();
+        Contador c1 = new Contador();
         System.out.println("Digite a quantidade de funcionarios: ");
         int funcionarios = (print.nextInt());
         while (x++ < funcionarios) {
@@ -33,6 +34,9 @@ public class Contador {
             t1.setSalarioBruto(print.nextFloat());
             System.out.println("Digite a quantidade de dependentes do trabalhador: ");
             t1.setDependentes(print.nextInt());
+            rendaMensal +=  t1.getSalarioBruto() - c1.calcularImpostoDeRenda(t1);
+            System.out.println(c1.calcularImpostoDeRenda(t1));
         }
+        System.out.println("A quantidade de imposto a ser pago é de: " + rendaMensal);
     }
 }
