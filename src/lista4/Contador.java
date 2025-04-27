@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class Contador {
     public float calcularImpostoDeRenda(Trabalhador trabalhador) {
-        float salarioNovo = (float) (trabalhador.getSalarioBruto() - (189.59 * trabalhador.getDependentes()));
+        float deducaoDependente = (float) 189.59;
+        float salarioNovo = (float) (trabalhador.getSalarioBruto() - (deducaoDependente * trabalhador.getDependentes()));
         if (salarioNovo < 1903.98) {
             float valor = (float) salarioNovo;
             return valor;
