@@ -1,5 +1,7 @@
 package lista4;
 
 public class Roupa {
-    private enum
+    private Cor cor;
+    private Tamanho tamanho;
+    private Estado estado;
 }
