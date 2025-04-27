@@ -1,5 +1,7 @@
 package lista4;
 
+import java.util.Scanner;
+
 public class Contador {
     public float calcularImpostoDeRenda(Trabalhador trabalhador) {
         float salarioNovo = (float) (trabalhador.getSalarioBruto() - (189.59 * trabalhador.getDependentes()));
@@ -18,5 +20,19 @@ public class Contador {
         }
         return (float) (salarioNovo - 869.36);
     }
+
+    public static void main(String[] args) {
+        float rendaMensal = 0;
+        int x = 0;
+        Scanner print = new Scanner(System.in);
+        Trabalhador t1 = new Trabalhador();
+        System.out.println("Digite a quantidade de funcionarios: ");
+        int funcionarios = (print.nextInt());
+        while (x++ < funcionarios) {
+            System.out.println("Digite o salário bruto do trabalhador: ");
+            t1.setSalarioBruto(print.nextFloat());
+            System.out.println("Digite a quantidade de dependentes do trabalhador: ");
+            t1.setDependentes(print.nextInt());
+        }
     }
 }
