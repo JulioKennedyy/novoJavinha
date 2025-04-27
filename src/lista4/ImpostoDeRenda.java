@@ -1,5 +1,7 @@
 package lista4;
 
+import java.util.Scanner;
+
 public class ImpostoDeRenda {
     private float salario;
 
@@ -30,7 +32,9 @@ public class ImpostoDeRenda {
 
     public static void main(String[] args) {
         ImpostoDeRenda sal = new ImpostoDeRenda();
-        sal.setSalario(6000);
+        System.out.printf("Digite seu salário: ");
+        Scanner print = new Scanner(System.in);
+        sal.setSalario(print.nextInt());
         System.out.println(sal.calcularImposto());
     }
 }
