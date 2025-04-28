@@ -1,5 +1,7 @@
 package lista4;
 
+import java.util.Scanner;
+
 public class MaquinaDeLavar {
     public int lavar (Roupa[] roupas) {
         int verificarRoupas = 0;
@@ -10,9 +12,7 @@ public class MaquinaDeLavar {
             } else if (i.getCor() == Cor.COLORIDO) {
                 verificarRoupas--;
             }
-            if (verificarRoupas < roupas.length + 1) {
-                return -1;
-            }
+
             if (i.getTamanho() == Tamanho.P) {
                 tempoDeLavagem += 3;
             }
@@ -32,10 +32,18 @@ public class MaquinaDeLavar {
                 i.setEstado(Estado.LIMPA);
             }
         }
+        if (verificarRoupas < roupas.length) {
+            return -1;
+        }
         return tempoDeLavagem;
     }
 
     public static void main(String[] args) {
-
+        Scanner print = new Scanner(System.in);
+        Roupa r = new Roupa(Cor.BRANCO,Tamanho.M,Estado.LIMPA);
+        Roupa b = new Roupa(Cor.COLORIDO,Tamanho.P,Estado.LIMPA);
+        Roupa lavagem[] = {r,b};
+        MaquinaDeLavar m = new MaquinaDeLavar();
+        System.out.println(m.lavar(lavagem));
     }
 }
