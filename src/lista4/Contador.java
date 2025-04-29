@@ -38,6 +38,7 @@ public class Contador {
             rendaMensal +=  t1.getSalarioBruto() - c1.calcularImpostoDeRenda(t1);
             System.out.println(c1.calcularImpostoDeRenda(t1));
         }
-        System.out.println("A quantidade de imposto a ser pago é de: " + rendaMensal);
+        String formatado = String.format("%.2f", rendaMensal);
+        System.out.println("A quantidade de imposto a ser pago é de: " + formatado);
     }
 }

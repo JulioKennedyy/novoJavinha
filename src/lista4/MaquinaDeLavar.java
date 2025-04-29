@@ -58,7 +58,7 @@ public class MaquinaDeLavar {
             System.out.print("Digite o tamanho (P, M, G): ");
             String entradaTamanho = print.nextLine().toUpperCase();
             Tamanho tamanho = Tamanho.valueOf(entradaTamanho);
-            System.out.print("Digite o estado da roupa (Limpa ou Suja: ");
+            System.out.print("Digite o estado da roupa (Limpa ou Suja): ");
             String entradaEstado = print.nextLine().toUpperCase();
             Estado estado = Estado.valueOf(entradaEstado);
             roupas[i] = new Roupa(cor,tamanho,estado);

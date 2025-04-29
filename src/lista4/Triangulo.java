@@ -45,7 +45,7 @@ public class Triangulo {
         }
         else {
             System.out.println("Total de isoceles: " + ++isoceles);
-            return TiposDeTriangulo.ISoceles;
+            return TiposDeTriangulo.Isoceles;
         }
     }
 
