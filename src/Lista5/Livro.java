@@ -38,9 +38,8 @@ public class Livro {
         preco = novoPreco;
     }
 
-    public boolean eIgual(Livro livro) {
-        Livro livro1 = new Livro();
-        if(livro1.getTitulo().equals(livro.getTitulo())) {
+    public boolean eIgual(Livro outroLivro) {
+        if(getTitulo().equalsIgnoreCase(outroLivro.getTitulo())) {
             return true;
         }
         return false;
