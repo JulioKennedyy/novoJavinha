@@ -33,17 +33,24 @@ public class Livraria {
         return true;
     }
 
-    public static void main(String[] args) {
-        Livro l1 = new Livro();
-        l1.setTitulo("oi");
-        Livro l2 = new Livro();
-        l2.setTitulo("oii");
-        Livraria li = new Livraria();
-        System.out.println(li.cadastrarLivro(l1));
-        System.out.println(li.cadastrarLivro(l2));
-        for(Livro l: li.getLivros()) {
-            System.out.println(l);
+    public String comprarLivro(String nomeLivro) {
+        for(Livro titulo: livros) {
+            if(titulo == null) {
+                System.out.println("Não Encontrado");
+                break;
+            }
+            if(titulo.getTitulo() == nomeLivro && titulo.getQuantidadeDisponivel() <= 0) {
+                return "ESGOTADO";
+            }
+            if(titulo.getTitulo() == nomeLivro && titulo.getQuantidadeDisponivel() > 0) {
+                titulo.setQuantidadeDisponivel(titulo.getQuantidadeDisponivel() - 1);
+                saldoEmCaixa += titulo.getPreco();
+            }
         }
-        System.out.println(li.getQuantidadeDeLivrosCadastrados());
+        return "SUCESSO";
+    }
+
+    public static void main(String[] args) {
+
     }
 }
