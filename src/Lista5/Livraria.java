@@ -1,5 +1,7 @@
 package Lista5;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Livraria {
@@ -52,7 +54,8 @@ public class Livraria {
         return "NÃO ENCONTRADO";
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        FileWriter escritor = new FileWriter("livros.txt", true);
         Scanner print = new Scanner(System.in);
         Livraria li = new Livraria();
         while (true) {
@@ -91,6 +94,12 @@ public class Livraria {
                 System.out.println(li.getSaldoEmCaixa());
             }
             else if (resposta == 5) {
+                for(Livro l: li.getLivros()) {
+                    if(l != null) {
+                        escritor.write("\n"+l.getTitulo() + ", " + l.getAnoDePublicacao() + ", " + l.getQuantidadeDisponivel() + ", " + l.getPreco());
+                    }
+                }
+                escritor.close();
                 break;
             }
             else {
