@@ -1,5 +1,9 @@
 package Lista6;
 
+import java.util.Scanner;
+
+import static Lista6.EstadoCivil.CASADO;
+
 public class Pessoa {
     private String nome;
     private EstadoCivil estadoCivil;
@@ -42,7 +46,7 @@ public class Pessoa {
     }
 
     public boolean equals(Pessoa pessoa) {
-        if (nome == pessoa.nome && estadoCivil == pessoa.estadoCivil && idade == pessoa.idade) {
+        if (nome.equals(pessoa.getNome()) && estadoCivil.equals(pessoa.getEstadoCivil()) && idade == pessoa.getIdade()) {
             return true;
         }
         return false;
@@ -65,8 +69,60 @@ public class Pessoa {
     }
 
     public static void main(String[] args) {
-        Pessoa p = new Pessoa();
-        p.setIdade(25);
-        System.out.println(p.toString());
+        Pessoa[] pessoas = new Pessoa[100];
+        int count = 0;
+        int solteiros = 0;
+        int casados = 0;
+        int erros = 0;
+        Scanner print = new Scanner(System.in);
+        while (true) {
+            Pessoa l = new Pessoa();
+
+            System.out.println("Digite o nome: ");
+            l.setNome(print.nextLine());
+            System.out.println("Digite sua idade: ");
+            l.setIdade(print.nextInt());
+            System.out.println("Digite seu estado civil(Solteiro, Casado, Viuvo, Separado): ");
+            print.nextLine();
+            String entradaEstado = print.nextLine().toUpperCase();
+            EstadoCivil estadoCivil = EstadoCivil.valueOf(entradaEstado);
+
+
+            for(Pessoa p: pessoas) {
+                if (p == null) {
+                    continue;
+                }
+                else if(l.equals(p)) {
+                    System.out.println("Não é possivel adicionar pessoas iguais");
+                    erros ++;
+                    break;
+                }
+            }
+            System.out.println("Digite x caso queira parar a execução: ");
+            String sair = (print.nextLine());
+            pessoas[count] = l;
+            count++;
+            if (sair.equalsIgnoreCase("x")) {
+                break;
+            }
+
+        }
+        for(Pessoa p : pessoas) {
+            if(p != null) {
+                if(p.getEstadoCivil().equals(EstadoCivil.CASADO)) {
+                    casados++;
+                }
+                else if(p.getEstadoCivil() != EstadoCivil.CASADO) {
+                    solteiros++;
+                }
+                System.out.println(p.toString());
+            }
+            else {
+                break;
+            }
+        }
+        System.out.println("A quantidade de solteiros é: " + solteiros);
+        System.out.println("A quantidade de casados é: " + casados);
+        System.out.println("A quantidade de erros é: " + casados);
     }
 }
