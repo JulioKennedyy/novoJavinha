@@ -23,4 +23,36 @@ public class ContaPoupanca {
         }
         return false;
     }
+
+    public float getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(float saldo) {
+        this.saldo = saldo;
+    }
+
+    public String getTitular() {
+        return titular;
+    }
+
+    public void setTitular(String titular) {
+        this.titular = titular;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    public float getTaxaDeRendimento() {
+        return taxaDeRendimento;
+    }
+
+    public void setTaxaDeRendimento(float taxaDeRendimento) {
+        this.taxaDeRendimento = taxaDeRendimento;
+    }
 }
