@@ -1,23 +1,23 @@
 package Lista7;
 
-public class ContaCorrente {
+public class ContaPoupanca {
     private float saldo;
     private String titular;
     private String numero;
-    private float chequeEspecial;
+    public float taxaDeRendimento;
 
-    public ContaCorrente(float saldo, String titular, String numero, float chequeEspecial) {
+    public ContaPoupanca(float saldo, String titular, String numero, float taxaDeRendimento) {
         this.saldo = saldo;
         this.titular = titular;
         this.numero = numero;
-        this.chequeEspecial = chequeEspecial;
+        this.taxaDeRendimento = taxaDeRendimento;
     }
 
     public String toString() {
-        return "Conta Corrente: " + numero + "Saldo atual: " + saldo;
+        return "Conta Poupança: " + numero + "Saldo atual: " + saldo;
     }
 
-    public boolean equals(ContaCorrente p) {
+    public boolean equals(ContaPoupanca p) {
         if(numero.equals(p.numero)) {
             return true;
         }
