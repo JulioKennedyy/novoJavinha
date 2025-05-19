@@ -14,7 +14,7 @@ public class ContaPoupanca {
     }
 
     public String toString() {
-        return "Conta Poupança: " + numero + "Saldo atual: " + saldo;
+        return "Conta Poupança: " + numero + " Saldo atual: " + saldo;
     }
 
     public boolean equals(ContaPoupanca p) {
