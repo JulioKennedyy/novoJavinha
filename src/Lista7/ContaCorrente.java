@@ -14,7 +14,7 @@ public class ContaCorrente {
     }
 
     public String toString() {
-        return "Conta Corrente: " + numero + "Saldo atual: " + saldo;
+        return "Conta Corrente: " + numero + " Saldo atual: " + saldo;
     }
 
     public boolean equals(ContaCorrente p) {
