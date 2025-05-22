@@ -45,6 +45,21 @@ public class Cobrador {
     }
 
     public String pagarPassagem(Passageiro p) {
-
+        if(p.isTemCarteirinha()) {
+            if(p.getDinheiro() < getCarteiraDeEstudante())
+                return "Valor insuficiente";
+            else {
+                p.setDinheiro(p.getDinheiro() - getCarteiraDeEstudante());
+                return "Pode passar. Saldo: " + p.getDinheiro();
+            }
+        }
+        else {
+            if(p.getDinheiro() < getValorDaPassagem())
+                return "Valor insuficiente";
+            else {
+                p.setDinheiro(p.getDinheiro() - getValorDaPassagem());
+                return "Pode passar. Saldo: " + p.getDinheiro();
+            }
+        }
     }
 }
