@@ -10,10 +10,10 @@ public class Gui {
         return nome;
     }
 
-    public static int falar(int numero) {
+    public static int falar(int dinheiro) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Digite seu nome: ");
-        numero = (scan.nextInt());
-        return numero;
+        System.out.println("Digite seu dinheiro: ");
+        dinheiro = (scan.nextInt());
+        return dinheiro;
     }
 }

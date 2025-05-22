@@ -11,6 +11,10 @@ public class Passageiro {
         this.temCarteirinha = temCarteirinha;
     }
 
+    public String toString() {
+        return "Nome: " + nome + ", Saldo: " + dinheiro + ", Tem carteirinha?: " + temCarteirinha;
+    }
+
     public String getNome() {
         return nome;
     }
