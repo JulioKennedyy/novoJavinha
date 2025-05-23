@@ -4,11 +4,25 @@ public class Cobrador {
     private float valorDaPassagem;
     private float carteiraDeEstudante;
     private int rotacaoDaCatraca;
+    private float caixaDoOnibus;
 
     public Cobrador(float valorDaPassagem, float descontoDaCarteiraEstudante) {
         descontoDaCarteiraEstudante = 2;
         this.valorDaPassagem = valorDaPassagem;
         this.carteiraDeEstudante = valorDaPassagem/descontoDaCarteiraEstudante;
+    }
+
+    public float getCaixaDoOnibus() {
+        return caixaDoOnibus;
+    }
+
+    public void setCaixaDoOnibus(float caixaDoOnibus) {
+        if(caixaDoOnibus <= 0) {
+            this.caixaDoOnibus = this.caixaDoOnibus;
+        }
+        else {
+            this.caixaDoOnibus = caixaDoOnibus;
+        }
     }
 
     public float getValorDaPassagem() {
@@ -40,8 +54,8 @@ public class Cobrador {
         this.rotacaoDaCatraca = rotacaoDaCatraca;
     }
 
-    public String toString(Cobrador c) {
-        return "O valor da passagem é: " + c.getValorDaPassagem() + ", O desconto para estudantes é de: " + c.getCarteiraDeEstudante();
+    public String toString() {
+        return "O valor da passagem é: " + getValorDaPassagem() + ", O desconto para estudantes é de: " + getCarteiraDeEstudante() + ", A catraca girou " + getRotacaoDaCatraca() + " vezes. O caixa do onibus tem: " + caixaDoOnibus;
     }
 
     public String pagarPassagem(Passageiro p) {
@@ -50,6 +64,8 @@ public class Cobrador {
                 return "Valor insuficiente";
             else {
                 p.setDinheiro(p.getDinheiro() - getCarteiraDeEstudante());
+                rotacaoDaCatraca++;
+                caixaDoOnibus+=carteiraDeEstudante;
                 return "Pode passar. Saldo: " + p.getDinheiro();
             }
         }
@@ -58,6 +74,8 @@ public class Cobrador {
                 return "Valor insuficiente";
             else {
                 p.setDinheiro(p.getDinheiro() - getValorDaPassagem());
+                rotacaoDaCatraca++;
+                caixaDoOnibus+=valorDaPassagem;
                 return "Pode passar. Saldo: " + p.getDinheiro();
             }
         }
