@@ -68,6 +68,7 @@ public class Cobrador {
                 caixaDoOnibus+=carteiraDeEstudante;
                 return "Pode passar. Saldo: " + p.getDinheiro();
             }
+
         }
         else {
             if(p.getDinheiro() < getValorDaPassagem())
