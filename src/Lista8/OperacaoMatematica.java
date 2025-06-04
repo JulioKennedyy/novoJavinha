@@ -1,11 +1,11 @@
 package Lista8;
 
 public abstract class OperacaoMatematica {
-    protected int operando1;
-    protected int operando2;
+    public int operando1;
+    public int operando2;
 
-    protected abstract float retornarResultado();
-    protected abstract void imprimirResultado();
+    public abstract float retornarResultado();
+    public abstract void imprimirResultado();
 
     public int getOperando1() {
         return operando1;

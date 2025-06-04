@@ -2,12 +2,12 @@ package Lista8;
 
 public class Multiplicar extends OperacaoMatematica{
     @Override
-    protected float retornarResultado() {
+    public float retornarResultado() {
         return operando1 * operando2;
     }
 
     @Override
-    protected void imprimirResultado() {
-        System.out.println(operando1 * operando2);
+    public void imprimirResultado() {
+        System.out.println(retornarResultado());
     }
 }
