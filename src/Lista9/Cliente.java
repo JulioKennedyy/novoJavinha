@@ -5,7 +5,12 @@ public class Cliente {
     private String cpf;
 
     public void descontoPassagem(float precoPassagem) {
-        System.out.println("O preço pago da passagem foi" + precoPassagem + " reais");
+        System.out.println("O preço pago da passagem foi de " + precoPassagem + " reais");
+    }
+
+    public Cliente(String nome, String cpf) {
+        this.nome = nome;
+        this.cpf = cpf;
     }
 
     public String getNome() {

@@ -1,8 +1,12 @@
 package Lista9;
 
 public class ClienteVip extends Cliente{
+    public ClienteVip(String nome, String cpf) {
+        super(nome, cpf);
+    }
+
     public void descontoPassagem(float precoPassagem) {
-        float valor = precoPassagem * 0.35f;
-        System.out.println("O preço pago da passagem foi" + valor + " reais");
+        float valor = precoPassagem - (precoPassagem * 0.35f);
+        System.out.println("O preço pago da passagem foi de " + valor + " reais");
     }
 }
