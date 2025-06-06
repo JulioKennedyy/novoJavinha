@@ -13,6 +13,6 @@ public class AtaqueEspecial implements Ataques{
 
     @Override
     public void movimento() {
-        System.out.println("Você usou " + nomeAtaque + " e causou " + dano + " pontos de dano e causou o efeito de" + efeito);
+        System.out.println("Você usou " + nomeAtaque + " e causou " + dano + " pontos de dano e causou o efeito de " + efeito);
     }
 }

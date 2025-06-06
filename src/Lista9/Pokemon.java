@@ -21,22 +21,22 @@ public class Pokemon{
     }
 
     public void usarAtaqueA() {
-        System.out.println(nome + "usou o ataque A");
+        System.out.println(nome + " usou o ataque A");
         ataqueA.movimento();
     }
 
     public void usarAtaqueB() {
-        System.out.println(nome + "usou o ataque B");
+        System.out.println(nome + " usou o ataque B");
         ataqueB.movimento();
     }
 
     public void usarAtaqueC() {
-        System.out.println(nome + "usou o ataque C");
+        System.out.println(nome + " usou o ataque C");
         ataqueC.movimento();
     }
 
     public void usarAtaqueD() {
-        System.out.println(nome + "usou o ataque A");
+        System.out.println(nome + " usou o ataque A");
         ataqueD.movimento();
     }
 
