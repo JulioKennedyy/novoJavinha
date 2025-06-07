@@ -1,4 +1,5 @@
 package Lista9.quest3;
 
-public class FormatacaoTexto {
+public abstract class FormatacaoTexto {
+    public abstract String formatarTexto(String texto);
 }
