@@ -8,7 +8,7 @@ public class Livro extends Publicacao{
 
     @Override
     public void mostrar() {
-        System.out.println("Nome do livro: " + this.getNome() + ", autor: " + autor + ", publicado em: ");
+        System.out.println("Nome do livro: " + this.getNome() + ", autor: " + autor + ", publicado em: " + ano);
     }
 
     @Override
