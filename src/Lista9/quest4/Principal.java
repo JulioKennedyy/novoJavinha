@@ -9,6 +9,7 @@ public class Principal {
         Publicacao p = null;
         ArrayList<Publicacao> publicacoes = new ArrayList<>();
 
+
         while (true) {
             System.out.println(" 1\n" +
                     "cadastrar novo livro, 2\n" +

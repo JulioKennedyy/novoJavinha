@@ -1,4 +1,4 @@
-package Lista9;
+package Lista9.quest2;
 
 import java.util.ArrayList;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package Lista9;
+package Lista9.quest2;
 
 public class Cliente {
     private String nome;

@@ -1,6 +1,6 @@
-package Lista9;
+package Lista9.quest2;
 
-public class ClienteVip extends Cliente{
+public class ClienteVip extends Cliente {
     public ClienteVip(String nome, String cpf) {
         super(nome, cpf);
     }
