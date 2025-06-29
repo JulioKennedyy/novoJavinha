@@ -19,4 +19,5 @@ public class MensageiroTeste {
             System.out.println("Externa: " + interna.getTexto());
         }
     }
+
 }
