@@ -9,7 +9,6 @@ public class MinhaData {
 
     public MinhaData(int dia, int mes, int ano) throws Exception {
         try {
-            // Tenta criar uma data com os valores fornecidos
             LocalDate data = LocalDate.of(ano, mes, dia);
             this.dia = dia;
             this.mes = mes;
