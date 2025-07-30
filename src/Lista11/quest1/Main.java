@@ -4,12 +4,12 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         MinhaData data = null;
 
         while (data == null) {
             System.out.print("Digite a data no formato dia/mes/ano: ");
-            String entrada = scanner.nextLine();
+            String entrada = scan.nextLine();
             String[] partes = entrada.split("/");
 
             if (partes.length != 3) {
@@ -28,8 +28,6 @@ public class Main {
                 System.out.println("Data inválida. Tente novamente.");
             }
         }
-
-        scanner.close();
     }
 }
 
